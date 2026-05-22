@@ -1,14 +1,259 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <h1>Hello World!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafeteria</title>
 
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Cafeteria Jade</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" bg id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#productos">Productos</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="1.jpg"
+            class="d-block w-100"
+            style="height: 600px; object-fit: cover"
+            alt=""
+          />
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="2.jpg"
+            class="d-block w-100"
+            style="height: 600px; object-fit: cover"
+            alt=""
+          />
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="3.webp"
+            class="d-block w-100"
+            style="height: 600px; object-fit: cover"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <section id="productos" class="container mt-5">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="card1.png"
+              class="card-img-top"
+              style="height: 250px; object-fit: cover"
+              alt=""
+            />
+
+            <div class="card-body">
+              <h5 class="card-title">Capuccino</h5>
+
+              <p class="card-text">
+                Café cremoso con espuma suave y sabor intenso.
+              </p>
+
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#modal1"
+              >
+                Ver más
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="card2.jpg"
+              class="card-img-top"
+              style="height: 250px; object-fit: cover"
+              alt=""
+            />
+
+            <div class="card-body">
+              <h5 class="card-title">Pastel de queso</h5>
+
+              <p class="card-text">
+                Delicioso pastel con textura suave y sabor dulce.
+              </p>
+
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#modal2"
+              >
+                Ver más
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="card3.jpg"
+              class="card-img-top"
+              style="height: 250px; object-fit: cover"
+              alt=""
+            />
+
+            <div class="card-body">
+              <h5 class="card-title">Latte</h5>
+
+              <p class="card-text">Café suave preparado con leche cremosa dulce.</p>
+
+              <button
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#modal3"
+              >
+                Ver más
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade" id="modal1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Capuccino</h5>
+
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            Postre artesanal con textura suave y delicioso sabor dulce. Perfecto
+            para acompañar tu café favorito.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Pastel de queso</h5>
+
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            Postre artesanal con textura suave y delicioso sabor dulce. Perfecto
+            para acompañar tu café favorito.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal3">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Latte</h5>
+
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            Bebida suave preparada con café y leche cremosa. Una opción cálida y
+            deliciosa para relajarse.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="contacto" class="container mt-5 mb-5">
+      <h2 class="text-center mb-4">Contacto</h2>
+
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Nombre</label>
+          <input type="text" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Asunto</label>
+          <input type="text" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Mensaje</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
